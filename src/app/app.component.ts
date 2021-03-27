@@ -1,10 +1,38 @@
-import { Component } from '@angular/core';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'first-ng-proj';
+  public treeControl = new NestedTreeControl<ITree>(node => node.children);
+  public dataSource = new MatTreeNestedDataSource<ITree>();
+  public hasChild = (_: number, node: ITree) => !!node.children && node.children.length > 0;
+  private readonly TREE_DATA: ITree[] = [
+    { name: "Homepage", url: "" },
+    {
+      name: "Esercizio 1",
+      children: [
+        { name: "Navigazione", url: "es" }
+      ]
+    },
+    {
+      name: "Esercizio 2",
+      children: [
+        { name: "Navigazione et Riutilizzo", url: "ia" }
+      ]
+    },
+  ];
+
+  constructor() { this.dataSource.data = this.TREE_DATA; }
+  
+}
+
+interface ITree {
+  name: string;
+  url?: string;
+  children?: ITree[];
 }
