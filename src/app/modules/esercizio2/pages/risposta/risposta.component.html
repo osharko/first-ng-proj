@@ -1,0 +1,6 @@
+<mat-list role="list">
+    <div *ngFor="let risposta of risposte; last as last;" (click)="naviga(risposta)">
+        <mat-list-item role="listitem"> {{risposta.risposta}}</mat-list-item>
+        <mat-divider *ngIf="!last"></mat-divider>
+    </div>
+</mat-list>

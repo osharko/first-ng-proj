@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToolbarService } from 'src/app/services/toolbar.service';
 
 @Component({
   selector: 'homepage',
@@ -6,4 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent{
   
+  constructor(private toolbarService: ToolbarService) {
+    toolbarService.title = "Homepage";
+  }
+
 }

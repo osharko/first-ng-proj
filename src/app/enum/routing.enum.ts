@@ -1,14 +1,17 @@
 export enum HomepageRoutingEnum {
-    HOMEPAGE = "/homepage"
+    Homepage = "/homepage"
 };
 
-export enum Esercizio1RoutingEnum{
-    Landing = "/Esercizio1",
-    Page1 = "/Esercizio1/Pagina1",
-    Page2 = "/Esercizio1/Pagina2",
-    Page3 = "/Esercizio1/Pagina3",
+export enum Esercizio1RoutingEnum {
+    Landing = "/esercizio1",
+    Page1 = "/esercizio1/pagina1",
+    Page2 = "/esercizio1/pagina2",
+    Page3 = "/esercizio1/pagina3",
 };
 
-export enum Esercizio2RoutingEnum{
-    Esercizio2Landing = "/Esercizio2"
+export enum Esercizio2RoutingEnum {
+    Introduzione = "/esercizio2",
+    Domanda = "/esercizio2/domanda",
+    Risposta = "/esercizio2/risposta",
+    Riepilogo = "/esercizio2/riepilogo",
 };

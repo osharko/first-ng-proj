@@ -1,0 +1,3 @@
+<div class="w-50 m-4 mx-auto" *ngFor="let domandaSelezionata of domandeSelezionate;let i = index;">
+    <riepilogo-box (modifica)="navigate(i)" [rows]="domandaSelezionata"></riepilogo-box>
+</div>

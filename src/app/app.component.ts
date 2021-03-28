@@ -13,7 +13,7 @@ export class AppComponent {
   public dataSource = new MatTreeNestedDataSource<ITree>();
   public hasChild = (_: number, node: ITree) => !!node.children && node.children.length > 0;
   private readonly TREE_DATA: ITree[] = [
-    { name: "Homepage", url: HomepageRoutingEnum.HOMEPAGE },
+    { name: "Homepage", url: HomepageRoutingEnum.Homepage },
     {
       name: "Esercizio 1",
       children: [
@@ -23,7 +23,7 @@ export class AppComponent {
     {
       name: "Esercizio 2",
       children: [
-        { name: "Navigazione et Riutilizzo", url: Esercizio2RoutingEnum.Esercizio2Landing }
+        { name: "Navigazione et Riutilizzo", url: Esercizio2RoutingEnum.Introduzione }
       ]
     },
   ];
