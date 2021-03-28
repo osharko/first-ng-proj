@@ -22,16 +22,13 @@ export class RispostaComponent {
   }
 
   public naviga(risposta: IRisposta) {
-
     this.dataService.domandeSelezionate[this.dataService.indiceDomanda-1] = {
       idDomanda: this.dataService.domandaSelezionata?.id || "",
       domanda: this.dataService.domandaSelezionata?.descrizione || "",
       idRisposta: risposta.id,
       risposta: risposta.risposta
     };
-    
-    debugger;
-    
+        
     this.router.navigate([++this.dataService.indiceDomanda > 3 || this.dataService.isRiepilogoReached ? Esercizio2RoutingEnum.Riepilogo : Esercizio2RoutingEnum.Domanda]);
   }
 }

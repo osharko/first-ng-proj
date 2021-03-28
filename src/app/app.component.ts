@@ -1,12 +1,12 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { Esercizio1RoutingEnum, Esercizio2RoutingEnum, HomepageRoutingEnum } from './enum/routing.enum';
+import { Esercizio1RoutingEnum, Esercizio2RoutingEnum, ChangeDetectionRoutingEnum, HomepageRoutingEnum } from './enum/routing.enum';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   public treeControl = new NestedTreeControl<ITree>(node => node.children);
@@ -26,6 +26,13 @@ export class AppComponent {
         { name: "Navigazione et Riutilizzo", url: Esercizio2RoutingEnum.Introduzione }
       ]
     },
+    {
+      name: "Esercizio 3",
+      children: [
+        { name: "No ChangeDetection", url: ChangeDetectionRoutingEnum.NoCD },
+        { name: "ChangeDetection", url: ChangeDetectionRoutingEnum.CD },
+      ]
+    }
   ];
 
   constructor() { this.dataSource.data = this.TREE_DATA; }

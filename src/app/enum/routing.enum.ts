@@ -15,3 +15,8 @@ export enum Esercizio2RoutingEnum {
     Risposta = "/esercizio2/risposta",
     Riepilogo = "/esercizio2/riepilogo",
 };
+
+export enum ChangeDetectionRoutingEnum {
+    NoCD = "/esercizio3/no-cd",
+    CD = "/esercizio3/cd",
+};
