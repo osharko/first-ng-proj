@@ -1,6 +1,7 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { Esercizio1RoutingEnum, Esercizio2RoutingEnum, HomepageRoutingEnum } from './enum/routing.enum';
 
 @Component({
   selector: 'app-root',
@@ -12,23 +13,23 @@ export class AppComponent {
   public dataSource = new MatTreeNestedDataSource<ITree>();
   public hasChild = (_: number, node: ITree) => !!node.children && node.children.length > 0;
   private readonly TREE_DATA: ITree[] = [
-    { name: "Homepage", url: "" },
+    { name: "Homepage", url: HomepageRoutingEnum.HOMEPAGE },
     {
       name: "Esercizio 1",
       children: [
-        { name: "Navigazione", url: "es" }
+        { name: "Navigazione", url: Esercizio1RoutingEnum.Landing }
       ]
     },
     {
       name: "Esercizio 2",
       children: [
-        { name: "Navigazione et Riutilizzo", url: "ia" }
+        { name: "Navigazione et Riutilizzo", url: Esercizio2RoutingEnum.Esercizio2Landing }
       ]
     },
   ];
 
   constructor() { this.dataSource.data = this.TREE_DATA; }
-  
+
 }
 
 interface ITree {

@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const routes: Routes = [
-  { path: "", component: HomepageComponent}
+  { path: "", redirectTo: "homepage", pathMatch: "full" },
+  { path: "homepage", component: HomepageComponent },
+  { path: "Esercizio1", loadChildren: () => import("./modules/esercizio1/esercizio1.module").then(m => m.Esercizio1Module) }
 ];
 
 @NgModule({

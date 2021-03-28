@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToolbarService } from 'src/app/services/toolbar.service';
 
 @Component({
   selector: 'custom-toolbar',
@@ -6,5 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CustomToolbarComponent {
   @Output() toggle = new EventEmitter();
+  public get Titolo(): string { return this.toolbarService.title; }
+  constructor(private toolbarService: ToolbarService) { }
 
 }
