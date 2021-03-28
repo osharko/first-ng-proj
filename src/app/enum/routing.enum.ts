@@ -17,6 +17,10 @@ export enum Esercizio2RoutingEnum {
 };
 
 export enum ChangeDetectionRoutingEnum {
-    NoCD = "/esercizio3/no-cd",
-    CD = "/esercizio3/cd",
+    NoCD = "/changedetection/no-cd",
+    CD = "/changedetection/cd",
 };
+
+export enum EvolutiveEnum {
+    Landing = "/evolutive/",
+}

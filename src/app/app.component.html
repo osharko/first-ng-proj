@@ -7,7 +7,7 @@
         <li class="mat-tree-node my-0 no-line-style">
           <!-- use a disabled button to provide padding for tree leaf -->
           <button mat-button [routerLink]="node.url" routerLinkActive #activeLink="routerLinkActive"
-            [color]="activeLink.isActive ? 'primary': 'accent'">
+            [color]="activeLink.isActive ? 'primary': 'accent'" (click)="sidenav.toggle()">
             {{node.name}}
           </button>
         </li>

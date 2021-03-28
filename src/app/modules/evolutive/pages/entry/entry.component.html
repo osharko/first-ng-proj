@@ -1,0 +1,36 @@
+<mat-drawer-container class="w-100 h-100" autosize>
+
+    <router-outlet></router-outlet>
+
+    <mat-drawer #drawer class="p-5" mode="side" position="end">
+        <p>Auto-resizing sidenav</p>
+        <p>Lorem, ipsum dolor sit amet consectetur.</p>
+        <mat-vertical-stepper #stepper>
+            <mat-step>
+                <ng-template matStepLabel>Data Entry & Document Upload</ng-template>
+                <mat-label>Submitted on <strong>01/05/2020 14:30</strong> By <strong>Name Surname</strong> (LOP Creator)</mat-label>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Signature</ng-template>
+                <mat-label>Submitted on <strong>01/05/2020 14:30</strong> By <strong>Name Surname</strong> (LOP Creator)</mat-label>
+                <mat-label>Approved</mat-label>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <mat-label>You are done.</mat-label>
+                <div class="my-5">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper>
+
+    </mat-drawer>
+</mat-drawer-container>

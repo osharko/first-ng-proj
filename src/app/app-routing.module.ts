@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: "homepage", component: HomepageComponent },
   { path: "esercizio1", loadChildren: () => import("./modules/esercizio1/esercizio1.module").then(m => m.Esercizio1Module) },
   { path: "esercizio2", loadChildren: () => import("./modules/esercizio2/esercizio2.module").then(m => m.Esercizio2Module) },
-  { path: "esercizio3", loadChildren: () => import("./modules/changedetection/changedetection.module").then(m => m.ChangedetectionModule) },
+  { path: "changedetection", loadChildren: () => import("./modules/changedetection/changedetection.module").then(m => m.ChangedetectionModule) },
+  { path: "evolutive", loadChildren: () => import("./modules/evolutive/evolutive.module").then(m => m.EvolutiveModule) },
 ];
 
 @NgModule({
