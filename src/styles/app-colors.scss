@@ -1,0 +1,12 @@
+$c-colors: (
+    "clicine": #c9a0dc,
+    "purple": #370091,
+    "dark_blue": #1a02f5,
+);
+
+@each $name in map-keys($c-colors) {
+    .c-#{"" + $name} { color: map-get($c-colors, $name); }
+    .c-bg-#{"" + $name} { background-color: map-get($c-colors, $name); }
+    .c-border-#{"" + $name} { border-color: map-get($c-colors, $name); }
+    .c-tint-#{"" + $name} { tint-color: map-get($c-colors, $name); }
+}

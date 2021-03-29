@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { SidebarService } from 'src/app/modules/evolutive/services/sidebar.service';
-
 
 @Component({
   selector: 'entry',
@@ -12,23 +11,13 @@ export class EntryComponent implements OnInit, OnDestroy {
   @ViewChild(MatDrawer) public matDrawer?: MatDrawer;
 
   private subs: Subscription[] = [];
-  public tickle: Observable<boolean> = this.sidebarService.toggle.value$;
 
-  constructor(private sidebarService: SidebarService,) { }
+  constructor(private sidebarService: SidebarService) { }
 
   ngOnInit(): void {
-
-    this.sidebarService.toggle.value$.subscribe(toggle => {
-      this.matDrawer?.toggle();
-    });
-    /* this.subs = [
-      this.sidebarService.toggle.value$.subscribe(toggle => {
-        debugger;
-        if (toggle) {
-          alert("ainsmps");
-        }
-      }),
-    ]; */
+    this.subs = [
+      this.sidebarService.toggle.value$.subscribe(() => this.matDrawer?.toggle()),
+    ];
   }
 
   ngOnDestroy() { this.subs.forEach(sub => sub.unsubscribe()); }

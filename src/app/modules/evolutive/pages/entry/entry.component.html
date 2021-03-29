@@ -3,34 +3,171 @@
     <router-outlet></router-outlet>
 
     <mat-drawer #drawer class="p-5" mode="side" position="end">
-        <p>Auto-resizing sidenav</p>
-        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-        <mat-vertical-stepper #stepper>
-            <mat-step>
-                <ng-template matStepLabel>Data Entry & Document Upload</ng-template>
-                <mat-label>Submitted on <strong>01/05/2020 14:30</strong> By <strong>Name Surname</strong> (LOP Creator)</mat-label>
-                <div>
-                    <button mat-button matStepperNext>Next</button>
+        <button mat-icon-button (click)="drawer.toggle()" class="position-absolute top-0 right-0 m-2">
+            <mat-icon>close</mat-icon>
+        </button>
+
+        <h4><strong class="position-absolute top-0 left-0 m-3">LOP History</strong></h4>
+
+
+        <h3><strong>Assistere Unicredit nell'implementazione PSD2</strong></h3>
+        <h3>20/BEC/UCG/UCG/MI/SA091</h3>
+
+        <h3 class="c-bg-clicine c-purple rounded-pill px-3">LOP to be reviewed after request of the Customer on already
+            signed LOP</h3>
+
+
+        <mat-divider class="my-5"></mat-divider>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
                 </div>
-            </mat-step>
-            <mat-step>
-                <ng-template matStepLabel>Signature</ng-template>
-                <mat-label>Submitted on <strong>01/05/2020 14:30</strong> By <strong>Name Surname</strong> (LOP Creator)</mat-label>
-                <mat-label>Approved</mat-label>
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
                 </div>
-            </mat-step>
-            <mat-step>
-                <ng-template matStepLabel>Done</ng-template>
-                <mat-label>You are done.</mat-label>
-                <div class="my-5">
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
                 </div>
-            </mat-step>
-        </mat-vertical-stepper>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
+
+
+
+        <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <div class="c-bg-purple rounded-circle">
+                    <mat-icon>done</mat-icon>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="14" rowspan="1">
+                <h3 class="c-bg-dark_blue px-2 rounded">Data Entry & Document Upload</h3>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="3">
+                <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1">Submitted on 01/05/2020 14:30 By Name Surname
+                (LOP Creator)</mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+
+            <mat-grid-tile colspan="14" rowspan="1"></mat-grid-tile>
+        </mat-grid-list>
 
     </mat-drawer>
 </mat-drawer-container>
