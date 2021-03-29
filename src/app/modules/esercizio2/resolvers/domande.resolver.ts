@@ -14,6 +14,7 @@ export class DomandeResolver implements Resolve<boolean> {
   ) { }
 
   resolve(): Observable<boolean> {
+    this.dataService.reset();
     this.dataService.domandeSicurezza = this.apiService.getDomande();
     return of(true);
   }

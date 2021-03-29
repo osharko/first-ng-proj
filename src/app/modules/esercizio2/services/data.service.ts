@@ -9,4 +9,12 @@ export class DataService {
   public indiceDomanda = 1;
   public domandaSelezionata?: IDomanda;
   public isRiepilogoReached: boolean = false;
+
+  public reset() {
+    this.domandeSicurezza = [];
+    this.domandeSelezionate = Array<IDomandaSelezionata>(3);
+    this.indiceDomanda = 1;
+    this.domandaSelezionata = undefined;
+    this.isRiepilogoReached = false;
+  }
 }

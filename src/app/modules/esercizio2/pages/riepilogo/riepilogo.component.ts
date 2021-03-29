@@ -18,7 +18,7 @@ export class RiepilogoComponent {
     private router: Router
   ) {
     this.dataService.isRiepilogoReached = true;
-    this.toolbarService.title = `${dataService.domandaSelezionata?.domanda}`;
+    this.toolbarService.title = `Riepilogo`;
   }
 
   public navigate(index: number){
