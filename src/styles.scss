@@ -7,6 +7,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import '~bootstrap/scss/bootstrap';
 @import 'styles/app-images.scss';
 @import 'styles/app-colors.scss';
+@import 'styles/app-text.scss';
+@import 'styles/app-sizing.scss';
 
 .no-line-style{ list-style: none; }
 

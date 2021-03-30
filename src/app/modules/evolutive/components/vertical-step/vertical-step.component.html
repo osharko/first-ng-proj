@@ -1,0 +1,29 @@
+<mat-grid-list cols="15" rowHeight="40px" class="my-3" *ngIf="last; else notLast;">
+    <mat-grid-tile colspan="1" rowspan="1">
+        <div class="c-bg-purple rounded-circle">
+            <mat-icon>done</mat-icon>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #notLast>
+    <mat-grid-list cols="15" rowHeight="40px" class="my-3">
+        <mat-grid-tile colspan="1" rowspan="1">
+            <div class="c-bg-purple rounded-circle">
+                <mat-icon>{{last ? 'fiber_manual_record' : 'done'}}</mat-icon>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="14" rowspan="1">
+            <p class="t-26 text-left c-bg-dark_blue px-2 rounded">{{title}}</p>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="1" rowspan="3">
+            <div class="c-bg-purple mx-auto" style="width: 5px; height: 100%;">
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="t-16" colspan="14" rowspan="1">{{rows[0]}}</mat-grid-tile>
+        <mat-grid-tile class="t-16" colspan="14" rowspan="1">{{rows[1]}}</mat-grid-tile>
+        <mat-grid-tile class="t-16" colspan="14" rowspan="1">{{rows[2]}}</mat-grid-tile>
+    </mat-grid-list>
+</ng-template>

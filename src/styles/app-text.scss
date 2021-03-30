@@ -1,0 +1,5 @@
+$c-font-sizes: (12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 34, 40, 44, 45, 50, 60) !default;
+$c-font-weights: (200, 500, 600) !default;
+
+@each $size in $c-font-sizes { .t-#{$size} { font-size: $size + px; } }
+@each $weight in $c-font-weights { .font-weight-#{$weight} { font-weight: $weight; } }

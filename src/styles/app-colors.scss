@@ -8,5 +8,4 @@ $c-colors: (
     .c-#{"" + $name} { color: map-get($c-colors, $name); }
     .c-bg-#{"" + $name} { background-color: map-get($c-colors, $name); }
     .c-border-#{"" + $name} { border-color: map-get($c-colors, $name); }
-    .c-tint-#{"" + $name} { tint-color: map-get($c-colors, $name); }
 }
