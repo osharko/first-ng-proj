@@ -27,7 +27,7 @@ export class AppComponent {
       ]
     },
     {
-      name: "Esercizio 3",
+      name: "Change Detection",
       children: [
         { name: "No ChangeDetection", url: ChangeDetectionRoutingEnum.NoCD },
         { name: "ChangeDetection", url: ChangeDetectionRoutingEnum.CD },
@@ -37,6 +37,7 @@ export class AppComponent {
       name: "Evolutive",
       children: [
         { name: "Landing", url: EvolutiveEnum.Landing },
+        { name: "Zip", url: EvolutiveEnum.Zip },
       ]
     }
   ];

@@ -23,4 +23,5 @@ export enum ChangeDetectionRoutingEnum {
 
 export enum EvolutiveEnum {
     Landing = "/evolutive/",
+    Zip = "/evolutive/zip",
 }
