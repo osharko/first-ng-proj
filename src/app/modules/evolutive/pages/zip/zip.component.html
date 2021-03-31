@@ -1,9 +1,15 @@
 <div class="container m-5 mx-auto">
-    <div class="row" *ngFor="let scelta of scelte">
-        <mat-checkbox [checked]="scelta.checked" (change)="scelta.checked = !scelta.checked">
-            <!-- (ngModelChange)="updateAllComplete()" [(ngModel)]="scelta.checked" -->
-            <h1 class="my-auto">{{scelta.name}}</h1>
+    <div class="row">
+        <mat-checkbox [checked]="AllChecked" [indeterminate]="SomeChecked" (change)="selectAll()" color="warn">
+            <h1 class="my-auto">Select All</h1>
         </mat-checkbox>
+    </div>
+    <div class="container">
+        <div class="row" *ngFor="let scelta of scelte">
+            <mat-checkbox [checked]="scelta.checked" (change)="scelta.checked = !scelta.checked" color="primary">
+                <h1 class="my-auto">{{scelta.name}}</h1>
+            </mat-checkbox>
+        </div>
     </div>
     <div class="row mt-5">
         <mat-button-toggle [disabled]="!IsEnabled" (click)="download()">Download</mat-button-toggle>
